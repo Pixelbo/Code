@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Changer le curseur(la souris) par une image ou curseurs proposÃ©s en css</title>
+        <style type="text/css">
+                .curseur_normal
+                {
+                        cursor:default;
+                }
+                .curseur_auto
+                {
+                        cursor:auto;
+                }
+                .curseur_croix
+                {
+                        cursor:crosshair;
+                }
+                .curseur_aide
+                {
+                        cursor:help;
+                }
+                .curseur_move
+                {
+                        cursor:move;
+                }
+                .curseur_texte
+                {
+                        cursor:text;
+                }
+                .curseur_attente
+                {
+                        cursor:wait;
+                }
+                .curseur_pointer
+                {
+                        cursor:pointer;
+                }
+                .curseur_img
+                {
+                        cursor:url('curseur.gif'), default;
+                }
+                .curseur_n
+                {
+                        cursor:n-resize;
+                }
+                .curseur_s
+                {
+                        cursor:s-resize;
+                }
+                .curseur_e
+                {
+                        cursor:e-resize;
+                }
+                .curseur_w
+                {
+                        cursor:w-resize;
+                }
+                .curseur_ne
+                {
+                        cursor:ne-resize;
+                }
+                .curseur_nw
+                {
+                        cursor:nw-resize;
+                }
+                .curseur_se
+                {
+                        cursor:se-resize;
+                }
+                .curseur_sw
+                {
+                        cursor:sw-resize;
+                }
+                </style>
+    </head>
+    <body>
+        <div>
+            <em>(survolez les lignes pour voir les effets)</em>
+            <h1>G&eacute;n&eacute;ral</h1>
+            <span class="curseur_normal"><strong>Curseur normal:</strong> cursor:default;</span><br />
+            <span class="curseur_auto"><strong>Curseur automatique:</strong> cursor:auto;</span><br />
+            <span class="curseur_croix"><strong>Curseur croix:</strong> cursor:crosshair;</span><br />
+            <span class="curseur_aide"><strong>Curseur aide:</strong> cursor:help;</span><br />
+            <span class="curseur_move"><strong>Curseur d&eacute;placement:</strong> cursor:move;</span><br />
+            <span class="curseur_pointer"><strong>Curseur main(pointeur):</strong> cursor:pointer;</span><br />
+            <span class="curseur_texte"><strong>Curseur texte:</strong> cursor:text;</span><br />
+            <span class="curseur_attente"><strong>Curseur attente(sablier):</strong> cursor:wait;</span><br />
+            <span class="curseur_img"><strong>Curseur image:</strong> cursor:url('adresse_de_limage'), default;</span>
+            <h1>Redimention</h1>
+            <span class="curseur_n"><strong>Curseur redimetion nord(haut):</strong> cursor:n-resize;</span><br />
+            <span class="curseur_s"><strong>Curseur redimetion sud(bas):</strong> cursor:s-resize;</span><br />
+            <span class="curseur_e"><strong>Curseur redimetion est(droite):</strong> cursor:e-resize;</span><br />
+            <span class="curseur_w"><strong>Curseur redimetion ouest(gauche):</strong> cursor:w-resize;</span><br />
+            <span class="curseur_ne"><strong>Curseur redimetion nord est(haut droite):</strong> cursor:ne-resize;</span><br />
+            <span class="curseur_nw"><strong>Curseur redimetion nord ouest(haut gauche):</strong> cursor:nw-resize;</span><br />
+            <span class="curseur_se"><strong>Curseur redimetion sud est(bas droite):</strong> cursor:se-resize;</span><br />
+            <span class="curseur_sw"><strong>Curseur redimetion sud ouest(bas gauche):</strong> cursor:sw-resize;</span><br />
+            <br />
+            <strong><em>Remarques:</em></strong><br />
+            <ol>
+                <li>Les curseurs images ne fonctionnes pas sous Netscape 6.x et IE 5.x</li>
+                <li>n-resize = s-resize</li>
+                <li>e-resize = w-resize</li>
+                <li>ne-resize = se-resize</li>
+                <li>nw-resize = sw-resize</li>
+            </ol>
+        </div>
+    </body>
+</html>

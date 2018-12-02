@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Avant 2017</title>
+		<style>
+		@font-face {
+  font-family: 'Data-Control';
+    src:  url('Data-Control.ttf.woff') format('woff'),
+    url('Data-Control.ttf.svg#Data-Control') format('svg'),
+    url('Data-Control.ttf.eot'),
+    url('Data-Control.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+			html, body {
+				color: white;
+				height: 100%;
+				margin: 0;
+				padding: 0;
+				font-size: 2em;
+			}
+			
+			body {
+				background: url('http://aypierre.fr/bg.gif') repeat;
+				font-family: 'Data-Control', sans-serif;
+			}
+			
+			body > div {
+				width: 100%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			
+			body > div > div {
+				text-align: center;
+			}
+			
+			.counter > span:not(:last-of-type):after {
+				content: " : ";
+			}
+			
+			h1 {
+				margin: 0;
+			}
+
+			audio {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+<audio autoplay loop><source src="http://aypierre.fr/countdown.mp3" type="audio/mpeg"></audio>
+		<div>
+			<div>
+				<h1>2017</h1>
+				<div class="counter">
+					<span class="d"></span>
+					<span class="h"></span>
+					<span class="m"></span>
+					<span class="s"></span>
+				</div>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<script>
+			var target = new Date(2017, 0, 1, 0, 0, 0, 0);
+			function tick() {
+				var now = new Date();
+				var diff = Math.floor((target.getTime() - now.getTime())/1000);
+				
+				var seconds = diff % 60;
+				var minutes = Math.floor(diff%3600 / 60);
+				var hours = Math.floor(diff%86400 / 3600);
+				var days = Math.floor(diff / (60 * 60 * 24));
+				
+				$('.counter .d').html(days);
+				$('.counter .h').html(hours<10?"0"+hours:hours);
+				$('.counter .m').html(minutes<10?"0"+minutes:minutes);
+				$('.counter .s').html(seconds<10?"0"+seconds:seconds);
+			}
+		
+			$(document).ready(function() {
+				window.setInterval(tick, 1000);
+				tick();
+			});
+		</script>
+	</body>
+</html>

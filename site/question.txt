@@ -1,0 +1,3 @@
+<form method="post" action="resultat.php" /> 
+<input type="text" name="nom">
+<input type="submit" value="Valider" />

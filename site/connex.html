@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Detecter vitesse de connexion</title>
+        <script type="text/javascript">
+        //<!--
+            var image = 'http://www.supportduweb.com/ftp/ybouane/scripts_astuces/javascript/vitesse_connexion/image.png';
+            var size = 158298;
+            var time1 = 0;
+            var time2 = 0;
+            function start_test_vitesse()
+            {
+                time1 = new Date();
+                time1 = time1.getTime();
+                var img = new Image();
+                img.src = image+'?'+time1;
+                img.onload=end_test_vitesse;
+            }
+            function end_test_vitesse()
+            {
+                var time2 = new Date();
+                time2 = time2.getTime();
+                var ms = time2-time1;
+                var vitesse = Math.round(size/ms*100)/100;
+                document.getElementById('vitesse').value=vitesse+'ko/s';
+            }
+        //-->
+        </script>
+    </head>
+    <body>
+        Vitesse de connexion: <input type="text" id="vitesse" size="27" /><input type="button" value="Tester" onclick="javascript:start_test_vitesse();" />
+    </body>
+</html>

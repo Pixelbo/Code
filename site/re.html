@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Image qui suit la souris</title>
+    <script type="text/javascript">
+        //<!--
+                document.onmousemove = suitsouris;
+                function suitsouris(evenement)
+                {
+                        if(navigator.appName=="Microsoft Internet Explorer")
+                        {
+                                var x = event.x+document.body.scrollLeft;
+                                var y = event.y+document.body.scrollTop;
+                        }
+                        else
+                        {
+                                var x =  evenement.pageX;
+                                var y =  evenement.pageY;
+                        }
+                        document.getElementById("image_suit_souris").style.left = (x+1)+'px';
+                        document.getElementById("image_suit_souris").style.top  = (y+1)+'px';
+                }
+        //-->
+        </script>
+</head>
+<body>
+        <img src="Illusion_de_couleurs.gif" alt="Image qui suit la souris" id="image_suit_souris" style="position:absolute;display:block;z-index:5;" />
+</body>
+</html>
