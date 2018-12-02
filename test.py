@@ -1,0 +1,3 @@
+ptttt = "caca"
+
+print(ptttt)
